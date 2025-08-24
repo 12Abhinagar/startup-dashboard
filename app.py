@@ -43,37 +43,6 @@ def load_overall_analysis():
     with col4:
         st.metric('Total StartUps', num_startups)
 
-    # st.header('📈 Month-on-Month (MoM) Graph')
-    #
-    # selected_option = st.selectbox('Select Type', ['Total', 'Count'])
-    #
-    # # Group data
-    # if selected_option == 'Total':
-    #     temp_df = df.groupby(['year', 'month'])['amount'].sum().reset_index()
-    # else:
-    #     temp_df = df.groupby(['year', 'month'])['amount'].count().reset_index()
-    #
-    # # Create proper datetime column for sorting
-    # temp_df['date'] = pd.to_datetime(temp_df['year'].astype(str) + '-' + temp_df['month'].astype(str) + '-01')
-    #
-    # # Sort by date
-    # temp_df = temp_df.sort_values('date')
-    #
-    # # Plot
-    # fig3, ax3 = plt.subplots(figsize=(10, 5))
-    # ax3.plot(temp_df['date'], temp_df['amount'], marker='o', linestyle='-', linewidth=2)
-    #
-    # # Labels & formatting
-    # ax3.set_title(f"Month-on-Month {selected_option}", fontsize=14, weight='bold')
-    # ax3.set_xlabel("Month", fontsize=12)
-    # ax3.set_ylabel("Amount" if selected_option == 'Total' else 'Count', fontsize=12)
-    # ax3.tick_params(axis='x', rotation=45)
-    #
-    # # Grid for readability
-    # ax3.grid(True, linestyle='--', alpha=0.6)
-    #
-    # st.pyplot(fig3)
-
     st.header('📈 Month-on-Month (MoM) Graph')
 
     selected_option = st.selectbox('Select Type', ['Total', 'Count'])
